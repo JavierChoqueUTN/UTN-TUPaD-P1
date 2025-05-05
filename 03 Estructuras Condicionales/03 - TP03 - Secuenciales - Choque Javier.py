@@ -1,6 +1,6 @@
 # 1) Escribir un programa que solicite la edad del usuario. Si el usuario es mayor de 18 años,
 #deberá mostrar un mensaje en pantalla que diga “Es mayor de edad”
-
+print("\nEjercicio 01:")
 edad = int(input("Ingrese su edad: "))
 if edad > 18:
     print("Es mayor de edad")
@@ -10,7 +10,7 @@ else:
 # 2) Escribir un programa que solicite su nota al usuario. Si la nota es mayor o igual a 6, deberá
 # mostrar por pantalla un mensaje que diga “Aprobado”; en caso contrario deberá mostrar el
 # mensaje “Desaprobado”.
-
+print("\nEjercicio 02:")
 nota = float(input("Ingrese su nota: "))
 if nota >= 6:
     print("Aprobado")
@@ -21,7 +21,7 @@ else:
 # número par, imprimir por en pantalla el mensaje "Ha ingresado un número par"; en caso
 # contrario, imprimir por pantalla "Por favor, ingrese un número par". Nota: investigar el uso del
 # operador de módulo (%) en Python para evaluar si un número es par o impar.
-
+print("\nEjercicio 03:")
 numero = int(input("Ingrese un numero: "))
 if numero % 2 == 0:
     print("Ha ingresado un numero par")
@@ -34,7 +34,7 @@ else:
 # ● Adolescente: mayor o igual que 12 años y menor que 18 años.
 # ● Adulto/a joven: mayor o igual que 18 años y menor que 30 años.
 # ● Adulto/a: mayor o igual que 30 años.
-
+print("\nEjercicio 04:")
 edad = int(input("Ingrese su edad: "))
 if edad < 12:
     print("Niño/a")
@@ -51,6 +51,7 @@ else:
 # pantalla "Por favor, ingrese una contraseña de entre 8 y 14 caracteres". Nota: investigue el uso
 # de la función len() en Python para evaluar la cantidad de elementos que tiene un iterable tal
 # como una lista o un string.
+print("\nEjercicio 05:")
 contraseña = input("Ingrese una contraseña: ")
 
 if 8 <= len(contraseña) <= 14:
@@ -65,6 +66,7 @@ else:
 import random
 import statistics
 
+print("\nEjercicio 06:")
 numeros_aleatorios = [random.randint(1, 100) for i in range(50)]
 moda = statistics.mode(numeros_aleatorios)
 mediana = statistics.median(numeros_aleatorios)
@@ -72,16 +74,16 @@ media = statistics.mean(numeros_aleatorios)
 
 # Condicionales
 if media > mediana > moda:
-    sesgo = "Sesgo positivo (a la derecha)"
+    sesgo = "Hay sesgo positivo"
 elif media < mediana < moda:
-    sesgo = "Sesgo negativo (a la izquierda)"
+    sesgo = "Hay sesgo negativo"
 elif media == mediana == moda:
-    sesgo = "Sin sesgo"
+    sesgo = "No hay sesgo"
 else:
-    sesgo = "No cumple con una de las condiciones estrictas de sesgo"
+    sesgo = "No es posible calcular sesgo"
 
 # Resultados
-print(f"Lista de números: {numeros_aleatorios}")
+print(f"Lista de numeros: {numeros_aleatorios}")
 print(f"Moda: {moda}")
 print(f"Mediana: {mediana}")
 print(f"Media: {media}")
@@ -92,13 +94,12 @@ print(f"Resultado: {sesgo}")
 # termina con vocal, añadir un signo de exclamación al final e imprimir el string resultante por
 # pantalla; en caso contrario, dejar el string tal cual lo ingresó el usuario e imprimirlo por
 # pantalla.
-
+print("\nEjercicio 07:")
 frase = input("Ingrese una frase o palabra: ")
 if frase[-1].lower() in 'aeiou':
-    frase += "!"
-    print("Frase resultante:", frase)
+    print(f"Frase: {frase}!")
 else:
-    print("Frase resultante:", frase)
+    print("Frase:", frase)
 
 # 8) Escribir un programa que solicite al usuario que ingrese su nombre y el número 1, 2 o 3
 # dependiendo de la opción que desee:
@@ -108,9 +109,9 @@ else:
 # El programa debe transformar el nombre ingresado de acuerdo a la opción seleccionada por el
 # usuario e imprimir el resultado por pantalla. Nota: investigue uso de las funciones upper(),
 # lower() y title() de Python para convertir entre mayúsculas y minúsculas.
-
+print("\nEjercicio 08:")
 nombre = input("Ingrese su nombre: ")
-opcion = int(input("Ingrese el número de la opción deseada (1: Mayúsculas, 2: Minúsculas, 3: Primera letra mayúscula): "))
+opcion = int(input("Ingrese el número de la opción deseada (\n1: Mayusculas, \n2: Minusculas, \n3: Primera letra mayuscula): "))
 
 if opcion == 1:
     print("Nombre transformado:", nombre.upper())
@@ -119,7 +120,7 @@ elif opcion == 2:
 elif opcion == 3:
     print("Nombre transformado:", nombre.title())
 else:
-    print("Opción no válida. Por favor, elija 1, 2 o 3.")
+    print("Opcion invalida.")
 
 # 9) Escribir un programa que pida al usuario la magnitud de un terremoto, clasifique la
 # magnitud en una de las siguientes categorías según la escala de Richter e imprima el resultado
@@ -132,7 +133,7 @@ else:
 # débiles).
 # ● Mayor o igual que 6 y menor que 7: "Muy Fuerte" (puede causar daños significativos).
 # ● Mayor o igual que 7: "Extremo" (puede causar graves daños a gran escala).
-
+print("\nEjercicio 09:")
 magnitud = float(input("Ingrese la magnitud del terremoto: "))
 
 if magnitud < 3:
@@ -151,46 +152,36 @@ else:
 # 10) Escribir un programa que pregunte al usuario en cuál hemisferio se encuentra (N/S), qué mes
 # del año es y qué día es. El programa deberá utilizar esa información para imprimir por pantalla
 # si el usuario se encuentra en otoño, invierno, primavera o verano.
+print("\nEjercicio 10:")
+hemisferio = input("Ingrese hemisferio (N/S): ")
+mes = int(input("Ingrese mes en numero (por ej.: 1 para enero, 2 para febrero, etc.): "))
+dia = int(input("Ingrese dia del mes: "))
+estacion = ""
 
-hemisferio = input("¿En cuál hemisferio estás? (N/S): ").strip().upper()
-mes = input("¿Qué mes es? (por ejemplo, enero, febrero, etc.): ").strip().lower()
-dia = int(input("¿Qué día del mes es?: "))
-
-# Mapear los meses a números para simplificar la comparación
-meses = {
-    "enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6,
-    "julio": 7, "agosto": 8, "septiembre": 9, "octubre": 10, "noviembre": 11, "diciembre": 12
-}
-
-# Convertir el mes ingresado en su número correspondiente
-mes_numero = meses.get(mes)
-
-if not mes_numero:
-    print("Mes inválido. Por favor, intenta nuevamente.")
-else:
-    # Determinar la estación según el hemisferio y las fechas
+if 0 < mes < 13:
     if hemisferio == "N":
-        if (mes_numero == 12 and dia >= 21) or (mes_numero in [1, 2]) or (mes_numero == 3 and dia <= 20):
+        if (mes == 12 and dia >= 21) or (mes == 1) or (mes == 2) or (mes == 3 and dia <= 20):
             estacion = "Invierno"
-        elif (mes_numero == 3 and dia >= 21) or (mes_numero in [4, 5]) or (mes_numero == 6 and dia <= 20):
+        elif (mes == 3 and dia >= 21) or (mes == 4) or (mes == 5) or (mes == 6 and dia <= 20):
             estacion = "Primavera"
-        elif (mes_numero == 6 and dia >= 21) or (mes_numero in [7, 8]) or (mes_numero == 9 and dia <= 20):
+        elif (mes == 6 and dia >= 21) or  (mes == 7) or (mes == 8)  or (mes == 9 and dia <= 20):
             estacion = "Verano"
-        elif (mes_numero == 9 and dia >= 21) or (mes_numero in [10, 11]) or (mes_numero == 12 and dia <= 20):
+        elif (mes == 9 and dia >= 21) or  (mes == 10) or (mes == 11)  or (mes == 12 and dia <= 20):
             estacion = "Otoño"
     elif hemisferio == "S":
-        if (mes_numero == 12 and dia >= 21) or (mes_numero in [1, 2]) or (mes_numero == 3 and dia <= 20):
+        if (mes == 12 and dia >= 21) or  (mes == 1) or (mes == 2)  or (mes == 3 and dia <= 20):
             estacion = "Verano"
-        elif (mes_numero == 3 and dia >= 21) or (mes_numero in [4, 5]) or (mes_numero == 6 and dia <= 20):
+        elif (mes == 3 and dia >= 21) or  (mes == 4) or (mes == 5)  or (mes == 6 and dia <= 20):
             estacion = "Otoño"
-        elif (mes_numero == 6 and dia >= 21) or (mes_numero in [7, 8]) or (mes_numero == 9 and dia <= 20):
+        elif (mes == 6 and dia >= 21) or  (mes == 7) or (mes == 8)  or (mes == 9 and dia <= 20):
             estacion = "Invierno"
-        elif (mes_numero == 9 and dia >= 21) or (mes_numero in [10, 11]) or (mes_numero == 12 and dia <= 20):
+        elif (mes == 9 and dia >= 21) or  (mes == 10) or (mes == 11)  or (mes == 12 and dia <= 20):
             estacion = "Primavera"
     else:
-        estacion = None
-        print("Hemisferio inválido. Por favor, intenta nuevamente.")
+        print("Hemisferio invalido.")
 
     # Mostrar el resultado
     if estacion:
-        print(f"Actualmente estás en la estación: {estacion}")
+        print(f"La estacion correspondiente es: {estacion}")
+else:
+    print("Mes invalido.")
