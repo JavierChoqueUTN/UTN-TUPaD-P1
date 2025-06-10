@@ -48,6 +48,10 @@ Se enfrentaron desafíos en el manejo de recursividad y la visualización clara 
 
 Como posible mejora futura, se consideraría la creación de una interfaz gráfica para facilitar la interacción y una representación basada en clases para una estructura más flexible y escalable.
 
+Link a videos:
+Parte 1: https://youtu.be/0O8c6M6T9eg
+Parte 2: https://youtu.be/qAfALohpKlM
+
 Programa desarrollado por:
 Choque Javier y Campana Mario
 Fecha: JUNIO/2025
